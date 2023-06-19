@@ -1,3 +1,4 @@
 ﻿  list to-do.cpp
-C:\Users\nedoymok\Desktop\Struct\list to-do\list to-do\list to-do.cpp(47,13): warning C4551: в вызове функции отсутствует список аргументов
-  list to-do.vcxproj -> C:\Users\nedoymok\Desktop\Struct\list to-do\x64\Debug\list to-do.exe
+C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\list to-do.cpp(48,13): warning C4551: в вызове функции отсутствует список аргументов
+  LINK : не найден или не выполнена сборка C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\x64\Debug\list to-do.exe при последней инкрементной компоновке; выполняется полная компоновка
+  list to-do.vcxproj -> C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\x64\Debug\list to-do.exe

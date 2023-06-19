@@ -22,6 +22,7 @@ void inputDelo(delo& d)
 }
 
 
+
 int main()
 {
     setlocale(LC_ALL, "Russian");
@@ -38,15 +39,13 @@ int main()
         cout << "3 - редактировать задание;" << endl;
         cout << "4 - найти задание;" << endl;
         cout << "5 - вывести на экран задания;" << endl;
-        cout << "6 - отсортировать задания;" << endl;
-        cout << "Выберите пункт для меню: " << endl;
         cin >> menu;
         switch (menu) 
         {
         case 1:
-            inputDelo();
+            inputDelo;
             break;
         };
     }
-    while (menu == 7);
+    while (menu == 6);
 };
