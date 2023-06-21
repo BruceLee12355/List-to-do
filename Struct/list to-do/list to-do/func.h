@@ -7,18 +7,18 @@ using namespace std;
 struct delo
 {
     string name;
-    int prior;
+    string prior;
     string ops;
-    int date;
+    string date;
 };
-
+ 
 void inputDelo(delo& d)
 {
     setlocale(LC_ALL, "Russian");
     cout << "¬ведите название задани€: "; cin >> d.name;
     cout << "¬ведите приоритет задани€: "; cin >> d.prior;
-    cout << "¬ведите  описание задани€: "; cin >> d.ops;
-    cout << "¬ведите  дату задани€ в формате день /недел€/мес€ц "; cin >> d.date;
+    cout << "¬ведите описание задани€: "; cin >> d.ops;
+    cout << "¬ведите дату задани€ в формате: день.мес€ц.год: "; cin >> d.date;
 }
 
 void editDelo(delo* mas, int size, int index)
@@ -31,4 +31,29 @@ void editDelo(delo* mas, int size, int index)
     cout << "¬ведите приоритет дела: " << endl; cin >> mas[index].prior;
     cout << "¬ведите описание: " << endl; cin >> mas[index].ops;
     cout << "ƒата дела: " << endl; cin >> mas[index].date;
+}
+
+int findDelo(delo* mas, int size, int prior,
+string name = "", string ops = "", string date = "")
+{
+    for (int i = 0; i < size; ++i)
+    {
+        if (mas[i].name == name)
+        {
+            return i;
+        }
+        else if (mas[i].prior == prior)
+        {
+            return i;
+        }
+        else if (mas[i].ops == ops)
+        {
+            return i;
+        }
+        else if (mas[i].date == date)
+        {
+            return i;
+        }
+        cout << "“акого дела нигде нет. ";
+    }
 }
