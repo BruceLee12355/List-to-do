@@ -12,19 +12,21 @@ struct delo
     string date;
 };
  
-void inputDelo(delo& d)
+void inputDelo(delo& d) //Ввод дела(Сделано)                   
 {
     setlocale(LC_ALL, "Russian");
     cout << "Введите название задания: "; cin >> d.name;
     cout << "Введите приоритет задания: "; cin >> d.prior;
-    cout << "Введите описание задания: "; cin >> d.ops;
+    cout << "Введитеописание задания: "; cin >> d.ops;
     cout << "Введите дату задания в формате: день.месяц.год: "; cin >> d.date;
 }
 
-void editDelo(delo* mas, int size, int index)
+void editDelo(delo* mas, int size) //Редактор дел(Сделанонаверное)
 {
+    int index = 0;
     setlocale(LC_ALL, "Russian");
-    if (index > size) {
+    cin >> index;
+    if (index >= size) {
         cout << "Такого дела нет в базе" << endl;
     }
     cout << "Введите имя дела: " << endl; cin >> mas[index].name;
@@ -33,7 +35,18 @@ void editDelo(delo* mas, int size, int index)
     cout << "Дата дела: " << endl; cin >> mas[index].date;
 }
 
-int findDelo(delo* mas, int size, int prior,
+void deleteDelo(delo* mas, int size) //Доделать удаление
+{
+    int index = 0;
+    setlocale(LC_ALL, "Russian");
+    cin >> index;
+    if (index >= size) {
+        cout << "Такого дела нет в базе" << endl;
+    }
+    
+}
+
+int findDelo(delo* mas, int size, string prior,
 string name = "", string ops = "", string date = "")
 {
     for (int i = 0; i < size; ++i)
@@ -55,5 +68,10 @@ string name = "", string ops = "", string date = "")
             return i;
         }
         cout << "Такого дела нигде нет. ";
+        return i;
     }
+}
+void outDelo(delo* mas, int index, int size) //Вывод всех дел на экран (Доделать)
+{
+
 }
