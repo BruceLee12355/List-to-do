@@ -2,6 +2,7 @@
 #include <string>
 #include "func.h"
 #include "utility.h"
+#include <fstream>
 
 using namespace std;
 
@@ -16,7 +17,7 @@ int main()
         cout << "MENU" << endl;
         cout << "1 - Ввести новую задачу;" << endl;
         cout << "2 - Редактировать дело;" << endl;
-        cout << "3 - Удалить задачу;" <<  endl;     //Менюшка (Сделана)
+        cout << "3 - Удалить задачу;" << endl;     //Менюшка (Сделана)
         cout << "4 - найти задание;" << endl;
         cout << "5 - вывести на экран задания;" << endl;
         cin >> menu;
@@ -27,12 +28,11 @@ int main()
             delo delo_;
             inputDelo(delo_);
             push_back(mas, size, delo_);
-            ++size; 
+            ++size;
         }
         case 2:
         {
             editDelo(mas, size);
-            break;
         }
         case 3:
         {

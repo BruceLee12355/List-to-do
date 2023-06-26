@@ -21,7 +21,7 @@ void inputDelo(delo& d) //¬вод дела(—делано)
     cout << "¬ведите дату задани€ в формате: день.мес€ц.год: "; cin >> d.date;
 }
 
-void editDelo(delo* mas, int size) //–едактор дел(—деланонаверное)
+void editDelo(delo* mas, int size) //–едактор дел(не пашет)
 {
     int index = 0;
     setlocale(LC_ALL, "Russian");

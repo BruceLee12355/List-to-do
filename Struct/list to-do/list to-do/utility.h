@@ -7,6 +7,10 @@
 #include <cstring>
 #include <iostream>
 
+//
+// DYNAMIC ARRAYS
+//
+
 template <typename T>
 T* copy(const T* array, size_t size) {
 	T* copy_array = new T[size];
@@ -35,15 +39,16 @@ T* reallocate(T* array, size_t size,
 }
 
 template <typename T>
-T* push_back(T* array, size_t size, T element) {
+T* push_back(T* array, size_t size, T& element) {
 	array = reallocate(array, size, size + 1);
 	array[size] = element;
 	return array;
 }
 
-int* insert(
-	int* array, size_t size,
-	size_t index, int element
+template <typename T>
+T* insert(
+	T* array, size_t size,
+	size_t index, T& element
 ) {
 	array = reallocate(array, size, size + 1);
 	++size;
@@ -68,7 +73,7 @@ T* pop(
 }
 
 template <typename T>
-bool has(T* array, size_t size, T element) {
+bool has(T* array, size_t size, T& element) {
 	for (size_t i = 0; i < size; ++i) {
 		if (array[i] == element)
 			return true;
@@ -77,7 +82,7 @@ bool has(T* array, size_t size, T element) {
 }
 
 template <typename T>
-int* remove_if(
+T* remove_if(
 	T* array, size_t& size,
 	bool (*predicate)(T element)
 ) {
@@ -133,6 +138,10 @@ ResultType accumulate(
 
 	return result;
 }
+
+//
+// DateTime
+//
 
 struct DateTime {
 	uint16_t year : 16;
@@ -204,6 +213,53 @@ DateTime operator+(const DateTime& dt1, const DateTime& dt2) {
 		(uint16_t)(minutes % 60),
 		(uint16_t)(seconds % 60)
 	};
+}
+
+// 
+// FILES
+//
+
+void file_write(
+	const char* filename,
+	const char* text
+) {
+	FILE* file_ptr = nullptr;
+	fopen_s(&file_ptr, filename, "w");
+	
+	if (file_ptr == nullptr) {
+		return;
+	}
+
+	const size_t length = strlen(text);
+
+	fwrite(
+		text, sizeof(char), length,
+		file_ptr
+	);
+	fclose(file_ptr);
+}
+
+char* file_read(
+	const char* filename, 
+	size_t string_size
+) {
+	FILE* file_ptr = nullptr;
+
+	fopen_s(&file_ptr, filename, "r");
+
+	if (file_ptr == nullptr)
+		return nullptr;
+
+	char* read_text = new char[string_size] {};
+
+	fread_s(
+		read_text, string_size,
+		sizeof(char), string_size, file_ptr
+	);
+
+	fclose(file_ptr);
+
+	return read_text;
 }
 
 #endif

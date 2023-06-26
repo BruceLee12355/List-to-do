@@ -1,9 +1,9 @@
 ﻿  list to-do.cpp
 C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\utility.h(183,11): warning C4101: result: неиспользованная локальная переменная
 C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\list to-do.cpp(34,31): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\list to-do.cpp(40,13): error C2660: deleteDelo: функция не принимает 0 аргументов
+C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\list to-do.cpp(39,13): error C2660: deleteDelo: функция не принимает 0 аргументов
 C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\func.h(38,6): message : см. объявление "deleteDelo"
-C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\list to-do.cpp(40,13): message : при попытке сопоставить список аргументов "()"
-C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\list to-do.cpp(44,13): error C2660: findDelo: функция не принимает 0 аргументов
+C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\list to-do.cpp(39,13): message : при попытке сопоставить список аргументов "()"
+C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\list to-do.cpp(43,13): error C2660: findDelo: функция не принимает 0 аргументов
 C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\func.h(49,5): message : см. объявление "findDelo"
-C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\list to-do.cpp(44,13): message : при попытке сопоставить список аргументов "()"
+C:\Users\admin\Desktop\List-to-do-main\Struct\list to-do\list to-do\list to-do.cpp(43,13): message : при попытке сопоставить список аргументов "()"
