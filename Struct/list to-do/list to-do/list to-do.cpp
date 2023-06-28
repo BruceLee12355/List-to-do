@@ -20,8 +20,9 @@ int main()
         cout << "3 - Удалить задачу;" << endl;     //Менюшка (Сделана)
         cout << "4 - найти задание;" << endl;
         cout << "5 - вывести на экран задания;" << endl;
+        cout << "6 - Выход" << endl;
         cin >> menu;
-        switch (menu)  // Разобраться с ошибкой "мало аргумнетов"
+        switch (menu)
         {
         case 1:
         {
@@ -29,22 +30,32 @@ int main()
             inputDelo(delo_);
             push_back(mas, size, delo_);
             ++size;
+            break;
         }
         case 2:
         {
-            editDelo(mas, size);
+
+            editDelo();
+            break;
         }
         case 3:
         {
-            
-            deleteDelo();
+            //deleteDelo();
+            --size;
+            break;
         }
         case 4:
         {
-            findDelo();
+            delo;
+            findDelo(mas, size);
+            break;
+        }
+        case 5:
+        {
+            //outDelo(mas, size);
+            break;
         }
         };
-    }
-    while (menu == 6); //Выход из менюшки
-    cout << "Пока...";
+    } while (menu != 6); //Выход из менюшки;
+    cout << "Пока..." << '\n' << '\n';
 }; 

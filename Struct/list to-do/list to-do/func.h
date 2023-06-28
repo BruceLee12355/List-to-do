@@ -25,8 +25,10 @@ void editDelo(delo* mas, int size) //Редактор дел(не пашет)
 {
     int index = 0;
     setlocale(LC_ALL, "Russian");
+    cout << "Введите номер дела: ";
     cin >> index;
-    if (index >= size) {
+    if (index >= size)
+    {
         cout << "Такого дела нет в базе" << endl;
     }
     cout << "Введите имя дела: " << endl; cin >> mas[index].name;
@@ -43,7 +45,6 @@ void deleteDelo(delo* mas, int size) //Доделать удаление
     if (index >= size) {
         cout << "Такого дела нет в базе" << endl;
     }
-    
 }
 
 int findDelo(delo* mas, int size, string prior,
@@ -67,11 +68,18 @@ string name = "", string ops = "", string date = "")
         {
             return i;
         }
-        cout << "Такого дела нигде нет. ";
-        return i;
+        cout << "Ты че написал. ";
+        return -1;
     }
 }
-void outDelo(delo* mas, int index, int size) //Вывод всех дел на экран (Доделать)
+void outDelo(delo* mas, int index, int size) //Вывод всех дел на экран
 {
-
+    for (int i = 0; i < size; ++i)
+    {
+        cout << "Все ваши дела: " << endl;
+        cout << mas[index].name;
+        cout << mas[index].prior;
+        cout << mas[index].ops;
+        cout << mas[index].date;
+    }
 }
