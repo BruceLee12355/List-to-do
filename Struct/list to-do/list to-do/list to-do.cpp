@@ -35,27 +35,30 @@ int main()
         case 2:
         {
 
-            editDelo();
+            editDelo(mas, size);
             break;
         }
         case 3:
         {
-            //deleteDelo();
+            delo delo_;
+            deleteDelo(mas, size);
             --size;
             break;
         }
         case 4:
         {
             delo;
-            findDelo(mas, size);
+            //findDelo(mas, size);
             break;
         }
         case 5:
         {
+            delo delo_;
             //outDelo(mas, size);
             break;
         }
         };
     } while (menu != 6); //Выход из менюшки;
+
     cout << "Пока..." << '\n' << '\n';
 }; 

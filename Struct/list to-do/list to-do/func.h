@@ -17,7 +17,7 @@ void inputDelo(delo& d) //Ввод дела(Сделано)
     setlocale(LC_ALL, "Russian");
     cout << "Введите название задания: "; cin >> d.name;
     cout << "Введите приоритет задания: "; cin >> d.prior;
-    cout << "Введитеописание задания: "; cin >> d.ops;
+    cout << "Введите описание задания: "; cin >> d.ops;
     cout << "Введите дату задания в формате: день.месяц.год: "; cin >> d.date;
 }
 
@@ -30,8 +30,11 @@ void editDelo(delo* mas, int size) //Редактор дел(не пашет)
     if (index >= size)
     {
         cout << "Такого дела нет в базе" << endl;
+        return;
     }
-    cout << "Введите имя дела: " << endl; cin >> mas[index].name;
+    char input[100];
+    cout << "Введите имя дела: " << endl; cin >> input;
+    mas[index].name = input;
     cout << "Введите приоритет дела: " << endl; cin >> mas[index].prior;
     cout << "Введите описание: " << endl; cin >> mas[index].ops;
     cout << "Дата дела: " << endl; cin >> mas[index].date;
